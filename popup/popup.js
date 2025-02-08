@@ -12,6 +12,12 @@ document.addEventListener('DOMContentLoaded', async function() {
     apiTokenInput.value = stored.apiToken;
   }
 
+  // Add notification div to the body
+  const notification = document.createElement('div');
+  notification.className = 'notification';
+  notification.textContent = 'Hoarded!';
+  document.body.appendChild(notification);
+
   // If we have both values, get current tab URL and make API call
   if (stored.hoarderUrl && stored.apiToken) {
     const tabs = await browser.tabs.query({ active: true, currentWindow: true });
@@ -35,10 +41,11 @@ document.addEventListener('DOMContentLoaded', async function() {
       });
 
       if (response.ok) {
-        console.log('Hoarded ' + currentUrl)
-      }
-
-      if (!response.ok) {
+        notification.classList.add('show');
+        setTimeout(() => {
+          notification.classList.remove('show');
+        }, 2000);
+      } else {
         throw new Error('API call failed');
       }
     } catch (error) {
