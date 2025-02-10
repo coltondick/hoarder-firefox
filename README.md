@@ -6,7 +6,8 @@ i tried the other only hoarder add-on for firefox and it just didn't work for (a
 
 so i quickly hacked this thing together, it's not pretty, but it works. :)
 
-currently awaiting firefox approval.
+[Firefox Store
+](https://addons.mozilla.org/de/firefox/addon/hoarder-app/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search)
 
 ## screenshots
 
