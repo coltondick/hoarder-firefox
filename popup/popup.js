@@ -12,6 +12,18 @@ document.addEventListener('DOMContentLoaded', async function() {
     apiTokenInput.value = stored.apiToken;
   }
 
+  // Add input change listeners for instant saving
+  urlInput.addEventListener('input', saveValues);
+  apiTokenInput.addEventListener('input', saveValues);
+
+  async function saveValues() {
+    const formData = {
+      hoarderUrl: urlInput.value,
+      apiToken: apiTokenInput.value
+    };
+    await browser.storage.local.set(formData);
+  }
+
   // Add notification div to the body
   const notification = document.createElement('div');
   notification.className = 'notification';
