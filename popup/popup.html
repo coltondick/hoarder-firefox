@@ -14,12 +14,25 @@
     <form>
       <div class="form-group">
         <label for="hoarderUrl">URL</label>
-        <input type="text" id="hoarderUrl" name="hoarderUrl" placeholder="Enter Hoarder URL" required>
+        <input type="url" id="hoarderUrl" name="hoarderUrl" placeholder="Enter Hoarder URL" required>
       </div>
       <div class="form-group">
         <label for="apiToken">API Token</label>
         <input type="password" id="apiToken" name="apiToken" placeholder="Enter your API token" required>
       </div>
+      <div class="form-group checkbox-group">
+        <label for="showNotifications">
+          <input type="checkbox" id="showNotifications" name="showNotifications">
+          Show notifications
+        </label>
+      </div>
+      <div class="form-group checkbox-group">
+        <label for="hoardOnOpen">
+          <input type="checkbox" id="hoardOnOpen" name="hoardOnOpen">
+          Hoard on popup open
+        </label>
+      </div>
+      <button type="button" class="import-button">Send All Bookmarks</button>
       <button type="submit" class="submit-button">Save</button>
     </form>
   </div>

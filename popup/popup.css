@@ -65,12 +65,32 @@ input:focus {
   font-size: 14px;
   cursor: pointer;
   transition: background-color 0.2s;
+  margin-bottom: 8px;
+  margin-top: 8px;
 }
 
 .submit-button:hover {
   background-color: #5a5a5a;
 }
 
+.import-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4a4a4a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+.import-button:hover {
+  background-color: #525252;
+}
 .notification {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   position: fixed;
@@ -91,4 +111,14 @@ input:focus {
 
 .notification.show {
   opacity: 1;
+}
+.checkbox-group {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
 }

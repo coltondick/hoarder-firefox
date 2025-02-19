@@ -20,3 +20,6 @@ so i quickly hacked this thing together, it's not pretty, but it works. :)
 ### after hoarding
 <img height="333x" src="./img/screenshot-success.png" />
 
+### hotkey 
+Go to about:addons -> Extensions -> Top-right Gear icon -> Manage Extension Shortcuts
+<img src="./img/screenshot-hotkey.png" />
