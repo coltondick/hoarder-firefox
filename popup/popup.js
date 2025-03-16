@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', async function() {
       const currentUrl = tabs[0].url;
       
       try {
-        const response = await fetch(`${stored.hoarderUrl}/api/trpc/bookmarks.createBookmark?batch=1`, {
+        const response = await fetch(`${stored.hoarderUrl}/api/v1/bookmarks`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
         for (const bookmark of allBookmarks) {
           try {
-            await fetch(`${stored.hoarderUrl}/api/trpc/bookmarks.createBookmark?batch=1`, {
+            await fetch(`${stored.hoarderUrl}/api/v1/bookmarks`, {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
